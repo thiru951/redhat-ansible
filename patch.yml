@@ -1,0 +1,9 @@
+- name: Patch Test Server
+  hosts: test
+  become: yes
+
+  tasks:
+    - name: Update packages
+      yum:
+        name: '*'
+        state: latest
