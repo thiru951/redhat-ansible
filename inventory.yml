@@ -4,4 +4,3 @@ all:
       hosts:
         192.168.1.90:
           ansible_user: thiru
-          ansible_ssh_private_key_file: /home/thiru/.ssh/id_ed25519
