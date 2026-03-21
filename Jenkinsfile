@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/thiru951/redhat-ansible.git'
+                git branch: 'main', url: 'https://github.com/thiru951/redhat-ansible.git'
             }
         }
 
