@@ -3,17 +3,17 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
+        stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/thiru951/redhat-ansible.git'
+                git 'https://github.com/thiru951/redhat-ansible.git'
             }
         }
 
-        stage('Run Ansible Playbook') {
+        stage('Run Ansible') {
             steps {
-                sh """
+                sh '''
                 ansible-playbook -i inventory.yml patch.yml
-                """
+                '''
             }
         }
     }
