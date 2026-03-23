@@ -3,4 +3,4 @@ all:
     test:
       hosts:
         192.168.1.90:
-          ansible_user: thiru
+          ansible_user: root
