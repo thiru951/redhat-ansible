@@ -12,7 +12,7 @@ pipeline {
         stage('Run Ansible') {
             steps {
                 sh '''
-                ansible-playbook -i inventory.yml patch.yml -u thiru
+                ansible-playbook -i inventory.yml patch.yml -u root
                 '''
             }
         }
