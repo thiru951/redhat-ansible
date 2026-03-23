@@ -12,7 +12,9 @@ pipeline {
         stage('Run Ansible') {
             steps {
                 sh '''
-                ansible-playbook -i inventory.yml patch.yml -u thiru
+                ansible-playbook -i inventory.yml patch.yml \
+                -u thiru \
+                --private-key=/home/thiru/.ssh/id_ed25519
                 '''
             }
         }
